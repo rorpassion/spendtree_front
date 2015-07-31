@@ -1,0 +1,386 @@
+	<div class="page-sidebar-wrapper">
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				<li class="sidebar-toggler-wrapper" style="margin-bottom:22px;">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler">
+					</div>
+					<!-- END SIDEBAR TOGGLER BUTTON -->
+				</li>
+
+				<li class="start active open">
+					<a href="#/" data-target="#additionalSelection">
+					<i class="icon-grid"></i>
+					<span class="title" ng-class="getClass('/properties/add')" >Dashboard <location></location> </span>
+					<span class="selected"></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;"  data-target="#additionalSelection">
+					<i class="icon-users"></i>
+					<span class="title">Clients</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#/clients/add" data-target="#additionalSelection">
+							<i class="icon-note"></i>
+							New</a>
+						</li>
+						<li>
+							<a href="#/clients/list">
+							<i class="icon-list"></i>
+							<span class="badge badge">6</span>
+							List</a>
+						</li>
+						<li>
+							<a href="#/clients/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							John Smith</a>
+						</li>
+						<li>
+							<a href="#/clients/edit/2" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Apartments, INC.</a>
+						</li>
+						<li>
+							<a href="#/clients/edit/3" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Chris Jones</a>
+						</li>
+						<li>
+							<a href="#/clients/edit/4" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Tom Brown</a>
+						</li>
+						<li>
+							<a href="#/clients/edit/5" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Benjamin Moore</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li >
+					<a href="" data-target="#additionalSelection">
+					<i class="icon-home"></i>
+					<span class="title">Properties</span>
+					<span class="arrow "></span>
+					</a>
+						<ul class="sub-menu">
+						<li>
+							<a href="#/properties/add" data-target="#additionalSelection">
+							<i class="icon-note"></i>
+							New</a>
+						</li>
+						
+						<li>
+							<a href="#/properties/list" data-target="#additionalSelection">
+							<i class="icon-list"></i>
+							<span class="badge badge">6</span>
+							List</a>
+						</li>
+						<li>
+							<a href="#/properties/edit/1" data-target="#additionalSelection">
+							<i class="icon-home"></i>
+							123 Main St.</a>
+						</li>
+						<li>
+							<a href="#/properties/edit/2" data-target="#additionalSelection">
+							<i class="icon-home"></i>
+							55323 16th Ave.</a>
+						</li>
+						<li>
+							<a href="#/properties/edit/3" data-target="#additionalSelection">
+							<i class="icon-home"></i>
+							6699 El Camino Real</a>
+						</li>
+						<li>
+							<a href="#/properties/edit/4" data-target="#additionalSelection">
+							<i class="icon-home"></i>
+							1212 Avenue J</a>
+						</li>
+						
+						
+					</ul>
+				</li>
+				<li>
+					<a href="" data-target="#additionalSelection">
+					<i class="icon-users"></i>
+					<span class="title">Tenants</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+					
+						<li>
+							<a href="#/tenants/add" data-target="#additionalSelection">
+							<i class="icon-note"></i>
+							New Tenant</a>
+						</li>
+						<li>
+							<a href="#/tenants/list" data-target="#additionalSelection">
+							<i class="icon-list"></i>
+							<span class="badge badge">6</span>
+							List</a>
+						</li>
+						<li>
+							<a href="#/tenants/outstanding" data-target="#additionalSelection">
+							<i class="icon-ban"></i>
+							Outstanding Balances</a>
+						</li>
+												<li>
+							<a href="#/tenants/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							John Smith</a>
+						</li>
+						<li>
+							<a href="#/tenants/edit/2" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Apartments, INC.</a>
+						</li>
+						<li>
+							<a href="#/tenants/edit/3" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Chris Jones</a>
+						</li>
+						<li>
+							<a href="#/tenants/edit/4" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Tom Brown</a>
+						</li>
+						<li>
+							<a href="#/tenants/edit/5" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Benjamin Moore</a>
+						</li>
+						
+					</ul>
+				</li><li>
+					<a href="" data-target="#additionalSelection">
+					<i class="icon-doc"></i>
+					<span class="title">Leases</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+					
+						<li>
+							<a href="#/leases/add" data-target="#additionalSelection">
+							<i class="icon-note"></i>
+							New Lease</a>
+						</li>
+						<li>
+							<a href="#/leases/list" data-target="#additionalSelection">
+							<i class="icon-list"></i>
+							<span class="badge badge">6</span>
+							List</a>
+						</li>												
+						
+					</ul>
+				</li><li>
+					<a href="" data-target="#additionalSelection"">
+					<i class="icon-tag"></i>
+					<span class="title">Transactions</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#/transactions/list" data-target="#additionalSelection">
+							<i class="icon-list"></i>
+							<span class="badge badge">2,342</span>
+							Bills</a>
+						</li>
+						<li>
+							<a href="#/transactions/rent/pay">
+							<i class="icon-pencil"></i>
+							Accept Rent</a>
+						</li>
+						<li>
+							<a href="#/transactions/add">
+							<i class="icon-pencil"></i>
+							Other Transaction</a>
+						</li>
+
+
+						
+					</ul>
+				</li>
+				
+				<li>
+					<a href="" data-target="#additionalSelection">
+					<i class="icon-book-open"></i>
+					<span class="title">Accounting</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">			
+						<li>
+							<a href="#/accounting/banking" data-target="#additionalSelection">
+							<i class="icon-credit-card"></i>
+							Banking</a>
+						</li>
+						<li>
+							<a href="#/accounting/ledger" data-target="#additionalSelection">
+							<i class="icon-notebook"></i>
+							General Ledger</a>
+						</li>
+						<li>
+							<a href="#/accounting/chart" data-target="#additionalSelection">
+							<i class="icon-list"></i>
+							Chart of Accounts</a>
+						</li>		
+						<li>
+							<a href="#/accounting/financials" data-target="#additionalSelection">
+							<i class="icon-notebook"></i>
+							Statements</a>
+						</li>	
+							
+								
+						
+						
+					</ul>
+				</li>
+
+				<li>
+					<a href="" data-target="#additionalSelection">
+					<i class="icon-briefcase"></i>
+					<span class="title">Vendors</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						
+						<li>
+							<a href="#/vendors/add" data-target="#additionalSelection">
+							<i class="icon-note"></i>
+							New</a>
+						</li>
+						<li>
+							<a href="#/vendors/list" data-target="#additionalSelection">
+							<i class="icon-list"></i>
+							<span class="badge badge">44</span>
+							List</a>
+						</li>
+						<li>
+							<a href="#/vendors/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							John Smith</a>
+						</li>
+						<li>
+							<a href="#/vendors/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Apartments, INC.</a>
+						</li>
+						<li>
+							<a href="#/vendors/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Chris Jones</a>
+						</li>
+						<li>
+							<a href="#/vendors/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Tom Brown</a>
+						</li>
+						<li>
+							<a href="#/vendors/edit/1" data-target="#additionalSelection">
+							<i class="icon-user"></i>
+							Benjamin Moore</a>
+						</li>
+						
+						
+					</ul>
+				</li>
+								<li>
+					<a href="" data-target="#additionalSelection">
+					<i class="icon-share-alt"></i>
+					<span class="title">Reports</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">			
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Balance Sheet</a>
+						</li>			
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							General Ledger</a>
+						</li>		
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Income Statement</a>
+						</li>	
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Rental Owner Statement</a>
+						</li>	
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Management Income</a>
+						</li>
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Property Statement</a>
+						</li>
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Current Tenants</a>
+						</li>
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Late Tenants</a>
+						</li>
+						<li>
+							<a href="">
+							<i class="icon-notebook"></i>
+							Rent Roll</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li class="heading">
+					<h3 class="uppercase">More</h3>
+				</li>
+				<li>
+					<a href="#/faq" data-target="#additionalSelection">
+					<i class="icon-question"></i>
+					<span class="title">FAQ</span>
+					</a>
+
+				</li>
+				<li>
+					<a href="#/contact" data-target="#additionalSelection">
+					<i class="icon-envelope-open"></i>
+					<span class="title">Contact</span>
+					</a>
+
+				</li>
+
+				<li class="last ">
+					<a targe="blank" href="https://spendtree.com/blog">
+					<i class="icon-speech"></i>
+					<span class="title">Blog</span>
+					</a>
+				</li>
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+<script type="text/javascript">
+   Layout.init(); // init layout
+   
+</script>

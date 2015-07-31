@@ -1,0 +1,199 @@
+
+			<!-- BEGIN PAGE HEADER-->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="#/">Home</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<i class="fa fa-tag"></i>
+						<a href="#/leases/list">Leases</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="">Edit</a>
+					</li>
+				</ul>
+
+			</div>
+			<h3 class="page-title">
+			Edit Lease
+			</h3>
+			<!-- END PAGE HEADER-->
+			<div class="row">
+			<div class="col-md-6 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet box green ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-tag"></i> Lease Details
+							</div>
+							<div class="tools">
+								<a href="" class="collapse" data-original-title="" title="">
+								</a>
+								
+								
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form class="form-horizontal" role="form">
+								<div class="form-body">
+								
+									<div class="form-group">
+										<label class="col-md-3 control-label">Property</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-home"></i>
+												</span>
+													<select class="form-control">
+														<option>Select Property</option>
+														<option selected>123 Main St.</option>
+														</select>
+													
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Tenant</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-user"></i>
+												</span>
+													<select class="form-control">
+														<option>Select Tenant</option>
+														<option>John Smith</option>
+														</select>
+													
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Lease Start</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+												</span>
+												<input class="form-control form-control-inline date-picker" size="16" type="text" value="6/1/12">
+											</div>
+											<span class="help-block">
+											Select date </span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Lease End</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+												</span>
+												<input class="form-control form-control-inline date-picker" size="16" type="text" value="6/1/16">
+											</div>
+											<span class="help-block">
+											Select date </span>
+										</div>
+									</div>
+									<hr>
+									<h4>Rent</h4>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Frequency</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+												</span>
+													<select class="form-control">
+														<option></option>
+														<option>Daily</option>
+														<option>Weekly</option>
+														<option>Every 2 Weeks</option>
+														<option selected>Monthly</option>
+														<option>Every 2 Months</option>
+														<option>Quarterly</option>
+														<option>Every 6 months</option>
+														<option>Yearly</option>
+														<option>One Time (Not Recurring)</option>
+														</select>
+													
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Next Due Date</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+												</span>
+												<input class="form-control form-control-inline date-picker" size="16" type="text" value="8/1/15">
+											</div>
+											<span class="help-block">
+											Select date </span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Late Policy</label>
+										<div class="col-md-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-tag"></i>
+												</span>
+												<input type="email" class="form-control" placeholder="E.g. $50 fee if recieved after the 5th" value="E.g. $50 fee if recieved after the 5th">
+											</div>
+										</div>
+									</div>
+									<hr>
+									<h4>Deposits</h4>
+									<table width="100%">
+									<thead>
+										<tr class="bold">
+											<td>Recieved On</td>
+											<td>Amount</td>
+											<td>Note</td>
+										</tr>
+									</thead>
+										<tr>
+											<td>6/1/12</td>
+											<td>$600</td>
+											<td>Security Deposit</td>
+										</tr>
+									</table>
+									<br><br>
+									<a href="javascript:;" class="btn btn-sm default">Add Deposit/Payment <i class="fa fa-plus"></i></a>
+								<hr>
+								<h4>Lease Document</h4>
+								<a href=""><i class="fa fa-file"></i> file1.pdf</a> - <button type="button" class="btn red btn-xs">Remove File</button>
+									<div class="form-group">
+										<div class="col-md-8" style="margin-top:5px;">
+											<div class="input-group">
+												Add File: <input type="file" id="exampleInputFile1">
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-9">
+											<button type="submit" class="btn green">Submit</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+					</div>
+			</div>
+			<div class="clearfix">
+			</div>
+
+	<script type="text/javascript">
+Layout.refreshNav();
+ComponentsPickers.init();
+</script>

@@ -1,0 +1,196 @@
+<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="modal fade" id="modal-addAccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="row">
+					<div class="col-md-offset-1 col-md-10">
+					<h4>Add Account</h4>
+						<form class="form-horizontal" role="form">
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-4 control-label">Name</label>
+										<div class="col-md-8">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-tag"></i>
+												</span>
+												<input type="email" class="form-control" placeholder="Account Name">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Type</label>
+										<div class="col-md-8">
+											<div class="input-group">
+													<div class="input-group">
+														<span class="input-group-addon">
+														<i class="fa fa-list"></i>
+														</span>
+														<select class="form-control">
+														<option>Asset</option>
+														<option>Liability</option>
+														<option>Income</option>
+														<option>Equity</option>
+														<option>Expense</option>
+														</select>											
+													</div>											</div>
+										</div>
+									</div>
+																	
+									<div class="form-group">
+										<label class="col-md-4 control-label">Comments</label>
+										<div class="col-md-8">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<i class="fa fa-tag"></i>
+												</span>
+												<input type="email" class="form-control" placeholder="What will this account be used for?">
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-9">
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn green">Submit</button>
+											
+										</div>
+									</div>
+								</div>
+							</form>
+							</div>
+							</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+			<!-- BEGIN PAGE HEADER-->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="index.html">Home</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="#/accounting/ledger">Accounting</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="">Accounts</a>
+					</li>
+				</ul>
+
+
+			</div>
+			<div class="row">
+				<div class="row">
+				<div class="col-md-3">
+					<h3 class="page-title">Accounts</h3> 
+				</div>
+				<div class="col-md-9 pull-left ng-scope" style="margin-top:20px;">
+					<div class="btn-group">
+														<a data-toggle="modal" data-target="#modal-addAccount" ><button type="button"class="btn blue">Add Account</button></a>
+														<button type="button" disabled class="btn blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-angle-down"></i></button>
+														
+													</div>
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box green">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-list"></i>Account Details
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="reload">
+								</a>
+							
+							</div>
+						</div>
+						<div class="portlet-body">
+								<table class="table table-striped table-bordered table-hover" id="sample_3">
+							<thead>
+							<tr>
+								<th>
+									 Account
+								</th>
+								<th>
+									 Account Type
+								</th>
+								
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									 Application Fee Income <br>
+									 <small>Application Fee Income</small>
+								</td>
+								<td>
+									 Income
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									 Rent Income <br>
+									 <small>Rent Income</small>
+								</td>
+								<td>
+									 Income
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									 Undeposited Funds<br>
+									 <small>Undeposited Funds</small>
+								</td>
+								<td>
+									 Current Asset
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									 Owner Draw <br>
+									 <small>Owner Draw</small>
+								</td>
+								<td>
+									 Equity
+								
+							</tr>
+							
+								
+							</tbody>
+							</table>
+						
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+			<div class="clearfix">
+			</div>
+			
+			
+			</div>
+<script type="text/javascript">
+Layout.refreshNav();
+</script>
+	

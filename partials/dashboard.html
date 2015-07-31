@@ -1,0 +1,936 @@
+
+			<!-- BEGIN PAGE HEADER-->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="#/dashboard">Home</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="">Dashboard</a>
+					</li>
+				</ul>
+
+			</div>
+			<h3 class="page-title">
+			Property Management Dashboard <small>ACME Property Management, INC.</small>
+			</h3>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN DASHBOARD STATS -->
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat blue-madison">
+						<div class="visual">
+							<i class="fa fa-building"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								  143
+							</div>
+							<div class="desc">
+								 Units Managed
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat green-jungle">
+						<div class="visual">
+							<i class="fa fa-bar-chart-o"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 $14,214
+							</div>
+							<div class="desc">
+								 Monthly Management Fees
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat yellow">
+						<div class="visual">
+							<i class="fa fa-clock-o"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 2
+							</div>
+							<div class="desc">
+								 Days Until Next Rent Due
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat red">
+						<div class="visual">
+							<i class="fa fa-warning"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 $4,250
+							</div>
+							<div class="desc">
+								 Overdue Rent - 6 Units
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat blue-madison">
+						<div class="visual">
+							<i class="fa fa-building"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								  4
+							</div>
+							<div class="desc">
+								 Units not rented
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat yellow">
+						<div class="visual">
+							<i class="fa fa-clock-o"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 6
+							</div>
+							<div class="desc">
+								 Leases Ending Within 45 days
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat purple">
+						<div class="visual">
+							<i class="fa fa-tasks"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 2
+							</div>
+							<div class="desc">
+								 Transactions Being Processed
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat green">
+						<div class="visual">
+							<i class="fa fa-male"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 8
+							</div>
+							<div class="desc">
+								New Rent Applications
+							</div>
+						</div>
+						<a class="more" href="javascript:;">
+						View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- END DASHBOARD STATS -->
+			<div class="clearfix">
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-bar-chart font-green-sharp hide"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">Revenue</span>
+								<span class="caption-helper">monthly</span>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="site_statistics_loading">
+								<img src="./assets/img/loading.gif" alt="loading"/>
+							</div>
+							<div id="site_statistics_content" class="display-none">
+								<div id="site_statistics" class="chart" style="height: 160px;">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-share font-red-sunglo hide"></i>
+								<span class="caption-subject font-red-sunglo bold uppercase">Units With Late Payment</span>
+								<span class="caption-helper">monthly</span>
+							</div>
+							</div>
+						<div class="portlet-body">
+							<div id="site_activities_loading">
+								<img src="./assets/img/loading.gif" alt="loading"/>
+							</div>
+							<div id="site_activities_content" class="display-none">
+								<div id="site_activities" style="height: 160px;">
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+			</div>
+			<div class="clearfix">
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="portlet light ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-cursor font-purple-intense hide"></i>
+								<span class="caption-subject font-purple-intense bold uppercase">Change from Last Month</span>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="easy-pie-chart">
+										<div class="number transactions" data-percent="12">
+											<span>
+											+12 </span>
+											%
+										</div>
+										<a class="title" href="javascript:;">
+										Units Managed <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="margin-bottom-10 visible-sm">
+								</div>
+								<div class="col-md-4">
+									<div class="easy-pie-chart">
+										<div class="number visits" data-percent="5">
+											<span>
+											+5 </span>
+											%
+										</div>
+										<a class="title" href="javascript:;">
+										Revenue <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="margin-bottom-10 visible-sm">
+								</div>
+								<div class="col-md-4">
+									<div class="easy-pie-chart">
+										<div class="number bounce" data-percent="26">
+											<span>
+											-26 </span>
+											%
+										</div>
+										<a class="title" href="javascript:;">
+										Late Rent <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="portlet light ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-equalizer font-purple-plum hide"></i>
+								<span class="caption-subject font-red-sunglo bold uppercase">Historical Stats</span>
+								<span class="caption-helper">monthly stats...</span>
+							</div>
+							<div class="tools">
+								<a href="" class="collapse">
+								</a>
+								<a href="#portlet-config" data-toggle="modal" class="config">
+								</a>
+								<a href="" class="reload">
+								</a>
+								<a href="" class="remove">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="sparkline-chart">
+										<div class="number" id="sparkline_bar"></div>
+										<a class="title" href="javascript:;">
+										Units <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="margin-bottom-10 visible-sm">
+								</div>
+								<div class="col-md-4">
+									<div class="sparkline-chart">
+										<div class="number" id="sparkline_bar2"></div>
+										<a class="title" href="javascript:;">
+										Clients <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="margin-bottom-10 visible-sm">
+								</div>
+								<div class="col-md-4">
+									<div class="sparkline-chart">
+										<div class="number" id="sparkline_line"></div>
+										<a class="title" href="javascript:;">
+										Tenants <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix">
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="portlet light ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-share font-blue-steel hide"></i>
+								<span class="caption-subject font-blue-steel bold uppercase">Recent Activities</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn btn-sm btn-default btn-circle" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+									Filter By <i class="fa fa-angle-down"></i>
+									</a>
+									<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+										<label><input type="checkbox"/> Clients</label>
+										<label><input type="checkbox" checked=""/> Properties</label>
+										<label><input type="checkbox"/> Tenants</label>
+										<label><input type="checkbox" checked=""/> Transactions</label>
+										<label><input type="checkbox"/> Vendors</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
+								<ul class="feeds">
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-info">
+														<i class="fa fa-check"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 Rent Payment Recieved.  <span class="label label-sm label-info ">
+														 Ref. No: 12A31<i class="fa fa-share"></i></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 Just now
+											</div>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;">
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-warning">
+														<i class="fa fa-bar-chart-o"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 Lease Expires Today <span class="label label-sm label-warning ">
+														  Take action <i class="fa fa-share"></i>
+
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 20 mins
+											</div>
+										</div>
+										</a>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-danger">
+														<i class="fa fa-user"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 Rent Not Recieved <span class="label label-sm label-danger ">
+														  Take action <i class="fa fa-share"></i></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 24 mins
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-info">
+														<i class="fa fa-shopping-cart"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 Invoice Entered <span class="label label-sm label-info">
+														By: SpendTree-Mark </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 30 mins
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-success">
+														<i class="fa fa-user"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New Unit Added: <span class="label label-sm label-default ">
+														#4 - 123 Main st. </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 24 mins
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-default">
+														<i class="fa fa-bell-o"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New Vendor Added: <span class="label label-sm label-default ">
+														John's Plumbing </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 2 hours
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-info">
+														<i class="fa fa-shopping-cart"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New client added: <span class="label label-sm label-info">
+														APARTMENTS, Inc. </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 30 mins
+											</div>
+										</div>
+									</li><li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-default">
+														<i class="fa fa-bell-o"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New Vendor Added: <span class="label label-sm label-default ">
+														John's Plumbing </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 2 hours
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-info">
+														<i class="fa fa-shopping-cart"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New client added: <span class="label label-sm label-info">
+														APARTMENTS, Inc. </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 30 mins
+											</div>
+										</div>
+									</li><li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-default">
+														<i class="fa fa-bell-o"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New Vendor Added: <span class="label label-sm label-default ">
+														John's Plumbing </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 2 hours
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col1">
+											<div class="cont">
+												<div class="cont-col1">
+													<div class="label label-sm label-info">
+														<i class="fa fa-shopping-cart"></i>
+													</div>
+												</div>
+												<div class="cont-col2">
+													<div class="desc">
+														 New client added: <span class="label label-sm label-info">
+														APARTMENTS, Inc. </span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col2">
+											<div class="date">
+												 30 mins
+											</div>
+										</div>
+									</li>
+									
+									
+									</ul>
+							</div>
+							<div class="scroller-footer">
+								<div class="btn-arrow-link pull-right">
+									<a href="javascript:;">See All Records</a>
+									<i class="icon-arrow-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="portlet light ">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-share font-blue-steel hide"></i>
+								<span class="caption-subject font-blue-steel bold uppercase">Recent Transactions</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn btn-sm btn-default btn-circle" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+									Filter By <i class="fa fa-angle-down"></i>
+									</a>
+									<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+										<label><input type="checkbox"/> Clients</label>
+										<label><input type="checkbox" checked=""/> Properties</label>
+										<label><input type="checkbox"/> Tenants</label>
+										<label><input type="checkbox" checked=""/> Transactions</label>
+										<label><input type="checkbox"/> Vendors</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
+								<ul class="feeds">
+										<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-info">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 Submitted Via App <span class="label label-sm label-info">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 Queued
+													</div>
+												</div>
+											</li>
+										<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-info">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 Submitted Via Email <span class="label label-sm label-info">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 Queued
+													</div>
+												</div>
+											</li><li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-info">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 Submitted Via Email <span class="label label-sm label-info">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 Queued
+													</div>
+												</div>
+											</li>
+										<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-info">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 Submitted Via Email <span class="label label-sm label-info">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 Queued
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-info">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 Uploaded Scanned Image <span class="label label-sm label-info">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 Queued
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 $145.23 - Mark's Plumbing <span class="label label-sm label-success">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 2 Mins
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 $600 - Rent Payment <span class="label label-sm label-success">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 25 Mins
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 $975 - Rent Payment <span class="label label-sm label-success">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 3 Hrs
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 $1412.23 - Tom's Appliances <span class="label label-sm label-success">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 4 Hrs
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 $15.23 - Joe's Painting <span class="label label-sm label-success">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 4 Hrs
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-tag"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 $653 - Elliot's Gardening <span class="label label-sm label-success">
+																Detail <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 8 Hrs
+													</div>
+												</div>
+											</li>
+										</ul>
+							</div>
+							<div class="scroller-footer">
+								<div class="btn-arrow-link pull-right">
+									<a href="javascript:;">See All Records</a>
+									<i class="icon-arrow-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="clearfix">
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light calendar ">
+						<div class="portlet-title ">
+							<div class="caption">
+								<i class="icon-calendar font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">Calendar</span>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="calendar">
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+			</div>
+			<div class="clearfix">
+			</div>
+	
+<script type="text/javascript">
+
+   Index.initCharts(); // init index page's custom scripts
+   Index.initMiniCharts();
+   Layout.refreshNav();
+   Index.initCalendar(); // init index page's custom scripts
+
+</script>	
