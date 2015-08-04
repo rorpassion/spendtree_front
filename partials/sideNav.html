@@ -21,7 +21,7 @@
 				<li class="start active open">
 					<a href="#/" data-target="#additionalSelection">
 					<i class="icon-grid"></i>
-					<span class="title" ng-class="getClass('/properties/add')" >Dashboard <location></location> </span>
+					<span class="title" ng-class="getClass('/properties/add')" >Dashboard </span>
 					<span class="selected"></span>
 					</a>
 				</li>
@@ -40,35 +40,14 @@
 						<li>
 							<a href="#/clients/list">
 							<i class="icon-list"></i>
-							<span class="badge badge">6</span>
+							<span class="badge badge">{{clients.length}}</span>
 							List</a>
 						</li>
-						<li>
-							<a href="#/clients/edit/1" data-target="#additionalSelection">
+						<li ng-repeat="client in clients">
+							<a href="#/clients/edit/{{client.id}}" data-target="#additionalSelection">
 							<i class="icon-user"></i>
-							John Smith</a>
+							{{client.name}}</a>
 						</li>
-						<li>
-							<a href="#/clients/edit/2" data-target="#additionalSelection">
-							<i class="icon-user"></i>
-							Apartments, INC.</a>
-						</li>
-						<li>
-							<a href="#/clients/edit/3" data-target="#additionalSelection">
-							<i class="icon-user"></i>
-							Chris Jones</a>
-						</li>
-						<li>
-							<a href="#/clients/edit/4" data-target="#additionalSelection">
-							<i class="icon-user"></i>
-							Tom Brown</a>
-						</li>
-						<li>
-							<a href="#/clients/edit/5" data-target="#additionalSelection">
-							<i class="icon-user"></i>
-							Benjamin Moore</a>
-						</li>
-						
 					</ul>
 				</li>
 				<li >

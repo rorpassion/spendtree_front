@@ -25,38 +25,53 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                     },
                     'content@dashboard': {
                         templateUrl:'partials/dashboard.html',
-                        controller: 'dashboardCtrl'
+                        controller: DashboardController
                     }
                 }
 			}) //clients
-			.state('clients_add', {
-                url: '/clients/add',
+            .state('clients', {
+                url: '/clients',
+                views: {
+                    'base': {
+                        templateUrl: 'app.html',
+                        controller: ClientController
+                    }
+                }
+            })
+			.state('clients.add', {
+                url: '/add',
                 views: {
                     'base': {
                         templateUrl: 'app.html',
                     },
-                    'content@clients_add': {
-                        templateUrl: 'partials/clients-add.html',
-                        controller: 'clientsCtrl'
+                    'content@clients': {
+                        templateUrl: 'partials/clients-add.html'
                     }
                 }
 			})
-			.state('clients_list', {
-                url: '/clients/list',
+			.state('clients.list', {
+                url: '/list',
                 views: {
                     'base': {
                         templateUrl: 'app.html',
                     },
-                    'content@clients_list': {
-                        templateUrl: 'partials/clients-list.html',
-                        controller: 'clientsCtrl'
+                    'content@clients': {
+                        templateUrl: 'partials/clients-list.html'
                     }
                 }
 			})
-//			.state('/clients/edit/:clientID', {
-//				templateUrl:'partials/clients-edit.html',
-//				controller: 'clientsCtrl'
-//			}).//properties
+			.state('clients.edit', {
+                url: '/edit/:id',
+                views: {
+                    'base': {
+                        templateUrl: 'app.html',
+                    },
+                    'content@clients': {
+                        templateUrl: 'partials/clients-edit.html',
+                        controller: ClientController        
+                    }
+                }
+			})//properties
 //			.state('/properties/add', {
 //				templateUrl:'partials/properties-add.html',
 //				controller: 'propertiesCtrl'
@@ -176,10 +191,10 @@ spendtreeApp.run(function ($rootScope, $localStorage, $state) {
     $rootScope.$state = $state;
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams){
         $rootScope.body_class = toState.name == "login" ? "login" : ""
-//        if (angular.isUndefined($localStorage.signed_in)) {
-//            event.preventDefault();
-//            $state.go('login');
-//        }
+        if (toState.name != "login" && angular.isUndefined($localStorage.user_id)) {
+            event.preventDefault();
+            $state.go('login');
+        }
         //show loading gif
 		Metronic.blockUI();
 
