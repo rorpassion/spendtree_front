@@ -2,7 +2,7 @@ var spendtreeApp = angular.module('spendtreeApp', ['ui.router', 'ngStorage', 're
 
 spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',
 	function($stateProvider, $urlRouterProvider, RestangularProvider){
-        RestangularProvider.setBaseUrl('http://www.spendtree-api.com/api/v1/');
+        RestangularProvider.setBaseUrl('http://localhost/laravel/spendtree/public/api/v1/');
         RestangularProvider.setDefaultHeaders({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
         
         $urlRouterProvider.otherwise("/otherwise");
@@ -72,17 +72,51 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                     }
                 }
 			})//properties
-//			.state('/properties/add', {
-//				templateUrl:'partials/properties-add.html',
-//				controller: 'propertiesCtrl'
-//			}).
-//			.state('/properties/list', {
-//				templateUrl:'partials/properties-list.html'
-//			}).
-//			.state('/properties/edit/:propertyID', {
-//				templateUrl:'partials/properties-edit.html'
-//				
-//			}).//tenants
+            .state('properties', {
+                url: '/properties',
+                views: {
+                    'base': {
+                        templateUrl: 'app.html',
+                        controller: PropertyController
+                    }
+                }
+            })
+			.state('properties.add', {
+                url: '/add',
+                views: {
+                    'base': {
+                        templateUrl: 'app.html'        
+                    },
+                    'content@properties': {
+                        templateUrl: 'partials/properties-add.html',
+                        controller: PropertyController                        
+                    }
+                }
+			})
+			.state('properties.list', {
+                url: '/list',
+                views: {
+                    'base': {
+                        templateUrl: 'app.html'        
+                    },
+                    'content@properties': {
+                        templateUrl: 'partials/properties-list.html',
+                        controller: PropertyController                        
+                    }
+                }
+			})
+			.state('properties.edit', {
+                url: '/edit/:id',
+                views: {
+                    'base': {
+                        templateUrl: 'app.html'        
+                    },
+                    'content@properties': {
+                        templateUrl: 'partials/properties-edit.html',
+                        controller: PropertyController                        
+                    }
+                }
+			})//tenants
 //			.state('/tenants/add', {
 //				templateUrl:'partials/tenants-add.html'
 //			}).
