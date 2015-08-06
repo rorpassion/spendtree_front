@@ -2,7 +2,7 @@ var spendtreeApp = angular.module('spendtreeApp', ['ui.router', 'ngStorage', 're
 
 spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',
 	function($stateProvider, $urlRouterProvider, RestangularProvider){
-        RestangularProvider.setBaseUrl('http://localhost/laravel/spendtree/public/api/v1/');
+        RestangularProvider.setBaseUrl('http://api.awardsmarket.com/api/v1/');
         RestangularProvider.setDefaultHeaders({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
         
         $urlRouterProvider.otherwise("/otherwise");
