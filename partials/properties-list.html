@@ -1,4 +1,5 @@
-			<!-- BEGIN PAGE HEADER-->
+		<div ng-init="init_list();">
+            <!-- BEGIN PAGE HEADER-->
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
@@ -58,212 +59,15 @@
 							</tr>
 							</thead>
 							<tbody>
-							<tr>
+							<tr ng-repeat="property in show_properties">
+                                <td>{{property.address}}</td>
+                                <td>{{property.type_label}}</td>
+                                <td>{{property.client_name}}</td>
+                                <td>{{property.total_units}}</td>
 								<td>
-									 123 Main Street
-								</td>
-								<td>
-									 Large Multifamily
-								</td>
-								<td>
-									 Apartments, INC. 
-								</td>
-								<td>
-									 36
-								</td>
-								<td>
-									 <a href="#/properties/edit/1"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
+									 <a ui-sref="properties({id: property.id})"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									 55323 16th Ave
-								</td>
-								<td>
-									 Single Family
-								</td>
-								<td>
-									 Bob Smith 
-								</td>
-								<td>
-									 1
-								</td>
-								<td>
-									 <a href="#/properties/edit/2"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 6699 El Camino Real
-								</td>
-								<td>
-									 Large Multifamily
-								</td>
-								<td>
-									 Mike Jones
-								</td>
-								<td>
-									 36
-								</td>
-								<td>
-									 <a href="#/properties/edit/3"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 1212 Avenue J
-								</td>
-								<td>
-									 Large Multifamily
-								</td>
-								<td>
-									 Apartments, INC. 
-								</td>
-								<td>
-									 36
-								</td>
-								<td>
-									 <a href="#/properties/edit/4"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 22 15th st
-								</td>
-								<td>
-									 Small Multifamily
-								</td>
-								<td>
-									 Bill Collins
-								</td>
-								<td>
-									 2
-								</td>
-								<td>
-									 <a href="#/properties/edit/5"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 233 Main Street
-								</td>
-								<td>
-									 Small Multifamily
-								</td>
-								<td>
-									 Apartments, INC. 
-								</td>
-								<td>
-									 3
-								</td>
-								<td>
-									 <a href="#/properties/edit/6"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 123 Main Street
-								</td>
-								<td>
-									 Large Multifamily
-								</td>
-								<td>
-									 Apartments, INC. 
-								</td>
-								<td>
-									 36
-								</td>
-								<td>
-									 <a href="#/properties/edit/7"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 1 Avenue J
-								</td>
-								<td>
-									 Single Family
-								</td>
-								<td>
-									 Bob Smith 
-								</td>
-								<td>
-									 1
-								</td>
-								<td>
-									 <a href="#/properties/edit/8"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 123 A St
-								</td>
-								<td>
-									 Large Multifamily
-								</td>
-								<td>
-									 Mike Jones
-								</td>
-								<td>
-									 36
-								</td>
-								<td>
-									 <a href="#/properties/edit/9"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 123 Main Street
-								</td>
-								<td>
-									 Large Multifamily
-								</td>
-								<td>
-									 Apartments, INC. 
-								</td>
-								<td>
-									 36
-								</td>
-								<td>
-									 <a href="#/properties/edit/10"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 22 15th st
-								</td>
-								<td>
-									 Small Multifamily
-								</td>
-								<td>
-									 Bill Collins
-								</td>
-								<td>
-									 2
-								</td>
-								<td>
-									 <a href="#/properties/edit/11"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 233 Main Street
-								</td>
-								<td>
-									 Small Multifamily
-								</td>
-								<td>
-									 Apartments, INC. 
-								</td>
-								<td>
-									 3
-								</td>
-								<td>
-									 <a href="#/properties/edit/12"><button type="button" class="btn blue btn-xs">Details <span><i class="fa fa-angle-right"></i></span></button></a>
-								</td>
-							</tr>
-							
-							
 							</tbody>
 							</table>
 						</div>
@@ -275,6 +79,7 @@
 			<!-- END PAGE CONTENT-->
 			<div class="clearfix">
 			</div>
+        </div>
 <script type="text/javascript">
 Layout.refreshNav();
 </script>

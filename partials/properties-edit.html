@@ -1,4 +1,4 @@
-
+        <div ng-init="init_edit();">
 			<!-- BEGIN PAGE HEADER-->
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -19,7 +19,7 @@
 
 			</div>
 			<h3 class="page-title">
-			123 Main St. <small>Property</small>
+			{{property_address}}<small>Property</small>
 			</h3>
 			<!-- END PAGE HEADER-->
 			<div class="row">
@@ -38,6 +38,7 @@
 							</div>
 						</div>
 						<div class="portlet-body form">
+                            <form class="form-horizontal" role="form" ng-submit="update_property();">
 							<div class="row">
 								<div class="col-md-6" style="padding-left:25px; padding-top:10px;">
 								<h4>Property Photo</h4>
@@ -46,7 +47,6 @@
 											</a>
 								</div>
 								<div class="col-md-6">
-								<form class="form-horizontal" role="form">
 									<div class="form-body">
 										<div class="form-group">
 											<label class="col-md-3 control-label">Client</label>
@@ -55,12 +55,8 @@
 													<span class="input-group-addon">
 													<i class="fa fa-user"></i>
 													</span>
-													<select class="form-control">
-													<option>Apartments, INC.</option>
-													<option>John Smith</option>
-													<option>Mike Jones</option>
-													
-												</select>											
+													<select class="form-control" ng-options="item.name for item in client_list track by item.id" ng-model="selected_client">
+												    </select>											
 												</div>
 											</div>
 										</div>
@@ -71,7 +67,7 @@
 													<span class="input-group-addon">
 													<i class="fa fa-compass"></i>
 													</span>
-													<input type="email" class="form-control" placeholder="Street Address" value="123 Main St.">
+													<input type="text" class="form-control" placeholder="Street Address" ng-model="property.address">
 												</div>
 											</div>
 										</div>
@@ -82,40 +78,38 @@
 													<span class="input-group-addon">
 													<i class="fa fa-dollar"></i>
 													</span>
-													<input type="email" class="form-control" placeholder="Street Address" value="900">
+													<input type="text" class="form-control" placeholder="Street Address" ng-model="property.reserve_amount">
 												</div>
 											</div>
 										</div>
 										<div class="form-group">
-												<label class="col-md-3 control-label">Units</label>
-												<div class="col-md-9">
-													<div class="input-group">
-													<div class="input-group" style="margin-top:10px;">
-														6
-													</div>
-														</div>
+											<label class="col-md-3 control-label">Units</label>
+											<div class="col-md-9">
+												<div class="input-group">
+												<div class="input-group" style="margin-top:10px;">
+													{{property.total_units}}
 												</div>
+													</div>
+											</div>
 										</div>
 										<div class="form-group">
-												<label class="col-md-3 control-label">Type</label>
-												<div class="col-md-9">
-													<div class="input-group" style="margin-top:10px;">
-														Large Multi (4+ Units)
-													</div>
+											<label class="col-md-3 control-label">Type</label>
+											<div class="col-md-9">
+												<div class="input-group" style="margin-top:10px;">
+													{{property_type[property.type]}}
 												</div>
+											</div>
 										</div>
-								</div>
-										
-										
+								    </div>
 								</div>
 							</div>
-								<div class="form-actions">
-									<div class="row">
-										<div class=" col-md-9">
-											<button type="submit" class="btn green">Update <span><i class="fa fa-refresh"></i></span></button>
-										</div>
+							<div class="form-actions">
+								<div class="row">
+									<div class=" col-md-9">
+										<button type="submit" class="btn green">Update <span><i class="fa fa-refresh"></i></span></button>
 									</div>
 								</div>
+							</div>
 							</form>
 						</div>
 					</div>
@@ -160,32 +154,32 @@
 						</div>
 						<div class="portlet-body">
 							<ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
-									<li class="">
-										<a href="javascript:;">
-										101 </a>
-									</li>
-									<li class="">
-										<a href="javascript:;">
-										102 </a>
-									</li>
-									<li class="">
-										<a href="javascript:;">
-										103 </a>
-									</li>
-									<li class="active">
-										<a href="javascript:;">
-										104 </a>
-									</li>
-									<li class="">
-										<a href="javascript:;">
-										105 </a>
-									</li>
-									<li class="">
-										<a href="javascript:;">
-										106 </a>
-									</li>
-									
-								</ul>
+								<li class="">
+									<a href="javascript:;">
+									101 </a>
+								</li>
+								<li class="">
+									<a href="javascript:;">
+									102 </a>
+								</li>
+								<li class="">
+									<a href="javascript:;">
+									103 </a>
+								</li>
+								<li class="active">
+									<a href="javascript:;">
+									104 </a>
+								</li>
+								<li class="">
+									<a href="javascript:;">
+									105 </a>
+								</li>
+								<li class="">
+									<a href="javascript:;">
+									106 </a>
+								</li>
+								
+							</ul>
 						<button type="button" class="btn btn blue">Add Unit</button>
 					</div>
 					<!-- END SAMPLE FORM PORTLET-->
@@ -294,7 +288,7 @@
 												<li class="list-group-item">
 													 Chris Brown
 													 <button class="btn btn-xs btn-danger pull-right" data-toggle="confirmation" data-original-title="Are you sure ?" title="">Remove</button>
-													
+                                                </li>
 											</ul>
 												<div class="input-group">
 												<span class="input-group-addon">
@@ -354,6 +348,7 @@
 			
 			
 			</div>
+        </div>
 <script type="text/javascript">
 Layout.refreshNav();
 </script>

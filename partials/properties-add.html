@@ -39,26 +39,34 @@
 							</div>
 						</div>
 						<div class="portlet-body form">
-							<form class="form-horizontal" role="form">
+							<form class="form-horizontal" role="form" ng-submit="add_property();">
 								<div class="form-body">
+                                <div class="alert alert-danger" ng-if="error=='failure'">
+                                    <button class="close" data-close="alert"></button>
+                                    You have some form errors. Please check below.
+                                </div>
+                                <div class="alert alert-success" ng-if="error=='success'">
+                                    <button class="close" data-close="alert"></button>
+                                    Client was created successfully!
+                                </div>
 								<h4>General Info</h4>
 									<div class="form-group">
-										<label class="col-md-4 control-label">Client</label>
+										<label class="col-md-4 control-label">
+                                            Client
+                                            <span class="required" aria-required="true"> * </span>
+                                        </label>
 										<div class="col-md-8">
 											<div class="input-group">
 												<span class="input-group-addon">
 												<i class="fa fa-user"></i>
 												</span>
-												<select class="form-control">
-												<option>Select</option>
-												<option>Apartments, INC</option>
-												<option>John Smith</option>
-												<option>Mike Jones</option>
-												
+												<select class="form-control" ng-model="property.client_id">
+												<option value="">Please select...</option>
+												<option ng-repeat="client in client_list" value="{{client.id}}">{{client.name}}</option>
 											</select>											
 											</div>
 											<p class="help-block">
-												 <a href="#/clients/add">[Add Client]</a>
+												 <a ui-sref="clients.add">[Add Client]</a>
 											</p>
 										</div>
 									</div>
@@ -69,7 +77,7 @@
 												<span class="input-group-addon">
 												<i class="fa fa-compass"></i>
 												</span>
-												<input type="email" class="form-control" placeholder="Street Address">
+												<input type="text" class="form-control" placeholder="Street Address" ng-model="property.address">
 											</div>
 										</div>
 									</div>
@@ -80,11 +88,12 @@
 												<span class="input-group-addon">
 												<i class="fa fa-home"></i>
 												</span>
-												<select class="form-control">
-												<option>Single Condominium</option>
-												<option>Single Family Home</option>
-												<option>Small Multifamily (2-4 units)</option>
-												<option>Large Multifamily (5+ units)</option>
+												<select class="form-control" ng-model="property.type">
+                                                <option value="">Please select...</option>
+												<option value="single-condo">Single Condominium</option>
+												<option value="single-home">Single Family Home</option>
+												<option value="small-family">Small Multifamily (2-4 units)</option>
+												<option value="large-family">Large Multifamily (5+ units)</option>
 											</select>											
 											</div>
 										</div>
@@ -96,7 +105,7 @@
 												<span class="input-group-addon">
 												<i class="fa fa-building"></i>
 												</span>
-												<input type="text" class="form-control" placeholder="# of Units" ng-model="units.value">
+												<input type="text" class="form-control" placeholder="# of Units" ng-model="property.total_units">
 											</div>
 										</div>
 									</div>
@@ -108,7 +117,7 @@
 												<span class="input-group-addon">
 												<i class="fa fa-dollar"></i>
 												</span>
-												<input type="email" class="form-control" placeholder="Property Reserve Amount">
+												<input type="text" class="form-control" placeholder="Property Reserve Amount" ng-model="property.reserve_amount">
 											</div>
 										</div>
 									</div>
@@ -130,10 +139,10 @@
 												<span class="input-group-addon">
 												<i class="fa fa-tag"></i>
 												</span>
-												<select class="form-control">
-												<option>Select</option>
-												<option>Percentage of Rents</option>
-												<option>Lump Sum</option>
+												<select class="form-control" ng-model="property.fee_type">
+												<option value="">Please select...</option>
+												<option value="percentage">Percentage of Rents</option>
+												<option value="lump">Lump Sum</option>
 											</select>											
 											</div>
 										</div>
@@ -145,7 +154,7 @@
 												<span class="input-group-addon">
 												<i class="fa fa-tag"></i>
 												</span>
-												<input type="email" class="form-control" placeholder="Fee amount">
+												<input type="text" class="form-control" placeholder="Fee amount" ng-model="property.fee_amount">
 											</div>
 										</div>
 									</div>
@@ -165,7 +174,7 @@
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-9">
-											<button ng-click="showDetails = ! showDetails" class="btn green">Next <span><i class="fa fa-angle-right"></i></span></button>
+											<button class="btn green">Next <span><i class="fa fa-angle-right"></i></span></button>
 										</div>
 									</div>
 								</div>

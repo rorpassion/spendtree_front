@@ -2,7 +2,7 @@ var spendtreeApp = angular.module('spendtreeApp', ['ui.router', 'ngStorage', 're
 
 spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',
 	function($stateProvider, $urlRouterProvider, RestangularProvider){
-        RestangularProvider.setBaseUrl('http://api.awardsmarket.com/api/v1/');
+        RestangularProvider.setBaseUrl('http://localhost/laravel/spendtree/public/api/v1/');
         RestangularProvider.setDefaultHeaders({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
         
         $urlRouterProvider.otherwise("/otherwise");
@@ -77,7 +77,12 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 views: {
                     'base': {
                         templateUrl: 'app.html',
-                        controller: PropertyController
+                        controller: PropertyController,
+                        resolve: {
+                            clientList: function(clientService){
+                                return clientService.getClientList();
+                            }
+                        }
                     }
                 }
             })
@@ -88,8 +93,7 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                         templateUrl: 'app.html'        
                     },
                     'content@properties': {
-                        templateUrl: 'partials/properties-add.html',
-                        controller: PropertyController                        
+                        templateUrl: 'partials/properties-add.html'
                     }
                 }
 			})
@@ -100,8 +104,7 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                         templateUrl: 'app.html'        
                     },
                     'content@properties': {
-                        templateUrl: 'partials/properties-list.html',
-                        controller: PropertyController                        
+                        templateUrl: 'partials/properties-list.html'     
                     }
                 }
 			})
@@ -113,7 +116,12 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                     },
                     'content@properties': {
                         templateUrl: 'partials/properties-edit.html',
-                        controller: PropertyController                        
+                        controller: PropertyController,
+                        resolve: {
+                            clientList: function(clientService){
+                                return clientService.getClientList();
+                            }
+                        }
                     }
                 }
 			})//tenants

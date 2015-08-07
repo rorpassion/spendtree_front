@@ -19,7 +19,7 @@
 				</li>
 
 				<li class="start active open">
-					<a href="#/" data-target="#additionalSelection">
+					<a href="#/dashboard" data-target="#additionalSelection">
 					<i class="icon-grid"></i>
 					<span class="title" ng-class="getClass('/properties/add')" >Dashboard </span>
 					<span class="selected"></span>
@@ -44,9 +44,10 @@
 							List</a>
 						</li>
 						<li ng-repeat="client in clients">
-							<a href="#/clients/edit/{{client.id}}" data-target="#additionalSelection">
-							<i class="icon-user"></i>
-							{{client.name}}</a>
+							<a href="#/clients/edit/({ client.id }}" data-target="#additionalSelection">
+							    <i class="icon-user"></i>
+							    {{client.name}}
+                            </a>
 						</li>
 					</ul>
 				</li>
@@ -69,28 +70,12 @@
 							<span class="badge badge">6</span>
 							List</a>
 						</li>
-						<li>
-							<a href="#/properties/edit/1" data-target="#additionalSelection">
-							<i class="icon-home"></i>
-							123 Main St.</a>
+						<li ng-repeat="property in properties">
+							<a href="#/properties/edit/{{property.id}}" data-target="#additionalSelection">
+							    <i class="icon-home"></i>
+							    {{property.address}}    
+                            </a>
 						</li>
-						<li>
-							<a href="#/properties/edit/2" data-target="#additionalSelection">
-							<i class="icon-home"></i>
-							55323 16th Ave.</a>
-						</li>
-						<li>
-							<a href="#/properties/edit/3" data-target="#additionalSelection">
-							<i class="icon-home"></i>
-							6699 El Camino Real</a>
-						</li>
-						<li>
-							<a href="#/properties/edit/4" data-target="#additionalSelection">
-							<i class="icon-home"></i>
-							1212 Avenue J</a>
-						</li>
-						
-						
 					</ul>
 				</li>
 				<li>
