@@ -38,7 +38,6 @@ var ClientController = function($rootScope, $scope, $state, $localStorage, Resta
     }
     
     $scope.update = function() {
-        debugger;
         if ($stateParams.id != null) {
             $scope.client.user_id = $localStorage.user_id;
             
@@ -46,7 +45,6 @@ var ClientController = function($rootScope, $scope, $state, $localStorage, Resta
             Restangular.one('clients', $stateParams.id).customPUT(data_encoded, undefined, undefined, undefined)
             .then(function(response) {
                 $scope.error = "success";
-                debugger;
                 Restangular.one('clients', $localStorage.user_id).getList('list').then(function(response) {
                     $rootScope.clients = response;
                 });

@@ -21,7 +21,8 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 url: '/dashboard',
                 views: {
                     'base': {
-                        templateUrl: 'app.html'
+                        templateUrl: 'app.html',
+                        controller: SidebarController
                     },
                     'content@dashboard': {
                         templateUrl:'partials/dashboard.html',
@@ -33,8 +34,7 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 url: '/clients',
                 views: {
                     'base': {
-                        templateUrl: 'app.html',
-                        controller: ClientController
+                        templateUrl: 'app.html'
                     }
                 }
             })
@@ -43,9 +43,11 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 views: {
                     'base': {
                         templateUrl: 'app.html',
+                        controller: SidebarController,
                     },
                     'content@clients': {
-                        templateUrl: 'partials/clients-add.html'
+                        templateUrl: 'partials/clients-add.html',
+                        controller: ClientController
                     }
                 }
 			})
@@ -54,9 +56,11 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 views: {
                     'base': {
                         templateUrl: 'app.html',
+                        controller: SidebarController
                     },
                     'content@clients': {
-                        templateUrl: 'partials/clients-list.html'
+                        templateUrl: 'partials/clients-list.html',
+                        controller: ClientController
                     }
                 }
 			})
@@ -65,6 +69,7 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 views: {
                     'base': {
                         templateUrl: 'app.html',
+                        controller: SidebarController
                     },
                     'content@clients': {
                         templateUrl: 'partials/clients-edit.html',
@@ -77,12 +82,7 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                 views: {
                     'base': {
                         templateUrl: 'app.html',
-                        controller: PropertyController,
-                        resolve: {
-                            clientList: function(clientService){
-                                return clientService.getClientList();
-                            }
-                        }
+                        controller: SidebarController,
                     }
                 }
             })
@@ -93,7 +93,13 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                         templateUrl: 'app.html'        
                     },
                     'content@properties': {
-                        templateUrl: 'partials/properties-add.html'
+                        templateUrl: 'partials/properties-add.html',
+                        controller: PropertyController,
+                        resolve: {
+                            clientList: function(clientService){
+                                return clientService.getClientList();
+                            }
+                        }
                     }
                 }
 			})
@@ -104,7 +110,13 @@ spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvide
                         templateUrl: 'app.html'        
                     },
                     'content@properties': {
-                        templateUrl: 'partials/properties-list.html'     
+                        templateUrl: 'partials/properties-list.html',
+                        controller: PropertyController,
+                        resolve: {
+                            clientList: function(clientService){
+                                return clientService.getClientList();
+                            }
+                        }     
                     }
                 }
 			})

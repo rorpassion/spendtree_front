@@ -44,7 +44,7 @@
 							List</a>
 						</li>
 						<li ng-repeat="client in clients">
-							<a href="#/clients/edit/({ client.id }}" data-target="#additionalSelection">
+							<a href="#/clients/edit/{{ client.id }}" data-target="#additionalSelection">
 							    <i class="icon-user"></i>
 							    {{client.name}}
                             </a>
@@ -67,7 +67,7 @@
 						<li>
 							<a href="#/properties/list" data-target="#additionalSelection">
 							<i class="icon-list"></i>
-							<span class="badge badge">6</span>
+							<span class="badge badge">{{properties.length}}</span>
 							List</a>
 						</li>
 						<li ng-repeat="property in properties">

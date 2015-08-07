@@ -182,141 +182,88 @@
 						</div>
 					</div>
 					<!-- END SAMPLE FORM PORTLET-->
-					</div>			<div class="col-md-6" ng-show="showDetails">
-					<!-- BEGIN SAMPLE FORM PORTLET-->
-					<div class="portlet box blue">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-search"></i>Unit Details
-							</div>
-							<div class="tools">
-								<a href="" class="collapse" data-original-title="" title="">
-								</a>
-								
-								
-							</div>
-						</div>
-						<div class="portlet-body">
-							<form class="form-horizontal" role="form">
-							<div class="unitDetails">
-							<h4>Unit 1 Details</h4>
-								<div class="form-body">
-									<div class="form-group">
-										<label class="col-md-3 control-label">Unit Name</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-tag"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="e.g. #101 or 'Upper'">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-3 control-label">Sq. Footage</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-crop"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Unit Size">										
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-3 control-label">Bedrooms</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-bed"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Number of Bedrooms">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-3 control-label">Bathrooms</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-male"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Number of Bathrooms">
-											</div>
-										</div>
-									</div>
-									
-									</div>
-							<hr>
-							<div class="unitDetails">
-							<h4>Unit 2 Details</h4>
-								<div class="form-body">
-									<div class="form-group">
-										<label class="col-md-3 control-label">Unit Name</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-tag"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="e.g. #101 or 'Upper'">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-3 control-label">Sq. Footage</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-crop"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Unit Size">										
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-3 control-label">Bedrooms</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-bed"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Number of Bedrooms">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-3 control-label">Bathrooms</label>
-										<div class="col-md-9">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-male"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Number of Bathrooms">
-											</div>
-										</div>
-									</div>
-									
-									</div>
-									
-								</div>
-								<div class="form-actions">
-									<div class="row">
-										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn blue">Submit</button>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
 					</div>
+                    <div class="col-md-6" ng-show="!showDetails">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					    <div class="portlet box blue">
+						    <div class="portlet-title">
+							    <div class="caption">
+								    <i class="fa fa-search"></i>Unit Details
+							    </div>
+							    <div class="tools">
+								    <a href="" class="collapse" data-original-title="" title="">
+								    </a>
+								    
+								    
+							    </div>
+						    </div>
+						    <div class="portlet-body">
+							    <form class="form-horizontal" role="form" ng-submit="add_units();">
+							        <div class="unitDetails" ng-repeat="unit in units">
+							            <h4>Unit 1 Details</h4>
+								        <div class="form-body">
+									        <div class="form-group">
+										        <label class="col-md-3 control-label">Unit Name</label>
+										        <div class="col-md-9">
+											        <div class="input-group">
+												        <span class="input-group-addon">
+												        <i class="fa fa-tag"></i>
+												        </span>
+												        <input type="email" class="form-control" placeholder="e.g. #101 or 'Upper'">
+											        </div>
+										        </div>
+									        </div>
+									        <div class="form-group">
+										        <label class="col-md-3 control-label">Sq. Footage</label>
+										        <div class="col-md-9">
+											        <div class="input-group">
+												        <span class="input-group-addon">
+												        <i class="fa fa-crop"></i>
+												        </span>
+												        <input type="email" class="form-control" placeholder="Unit Size">										
+											        </div>
+										        </div>
+									        </div>
+									        <div class="form-group">
+										        <label class="col-md-3 control-label">Bedrooms</label>
+										        <div class="col-md-9">
+											        <div class="input-group">
+												        <span class="input-group-addon">
+												        <i class="fa fa-bed"></i>
+												        </span>
+												        <input type="email" class="form-control" placeholder="Number of Bedrooms">
+											        </div>
+										        </div>
+									        </div>
+									        <div class="form-group">
+										        <label class="col-md-3 control-label">Bathrooms</label>
+										        <div class="col-md-9">
+											        <div class="input-group">
+												        <span class="input-group-addon">
+												        <i class="fa fa-male"></i>
+												        </span>
+												        <input type="email" class="form-control" placeholder="Number of Bathrooms">
+											        </div>
+										        </div>
+									        </div>
+									    </div>
+							            <hr>
+									</div>
+								    <div class="form-actions">
+									    <div class="row">
+										    <div class="col-md-offset-3 col-md-9">
+											    <button type="submit" class="btn blue">Submit</button>
+										    </div>
+									    </div>
+								    </div>
+							    </form>
+						    </div>
+					    </div>
 					<!-- END SAMPLE FORM PORTLET-->
 					</div>
-			</div>
-			<div class="clearfix">
-			</div>
-			
-			
-			</div>
+		        </div>
+		        <div class="clearfix">
+		        </div>
 <script type="text/javascript">
 Layout.refreshNav();
 </script>

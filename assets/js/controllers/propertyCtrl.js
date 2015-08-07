@@ -3,7 +3,6 @@
 var PropertyController = function($rootScope, $scope, $state, $localStorage, Restangular, $stateParams, clientList) {
     $scope.error = "";
     $scope.property = {};
-    $scope.properties = [];
     $scope.client_list = clientList;
     
     $scope.property_type = new Object();
@@ -11,24 +10,20 @@ var PropertyController = function($rootScope, $scope, $state, $localStorage, Res
     $scope.property_type['single-home'] = 'Single Family Home';
     $scope.property_type['small-family'] = 'Small Multifamily';
     $scope.property_type['large-family'] = 'Large Multifamily';
-
-    /**
+    
+      /**
     * Add new property when click Next button
     */
     $scope.add_property = function () {
         $scope.property.user_id = $localStorage.user_id;
+        $scope.units = [];
 
         var data_encoded = $.param($scope.property);
         Restangular.one('properties', $localStorage.user_id).customPOST(data_encoded, undefined, undefined, {'Content-Type': "application/x-www-form-urlencoded; charset=UTF-8"})
         .then(function(response) {
             $scope.error = 'success';
             $scope.showDetails = true;
-            
-            Restangular.one('properties', $localStorage.user_id).get().then(function(response) {
-                $rootScope.properties = response;
-                $scope.properties = $rootScope.properties;
-            });
-                                    
+            $scope.units = new Array($scope.property.total_units);
         }, function(error) {
             $scope.error = 'failure';
             $scope.showDetails = false;
@@ -84,7 +79,7 @@ var PropertyController = function($rootScope, $scope, $state, $localStorage, Res
             .then(function(response) {
                 $scope.error = "success";
                 $rootScope.properties = response;
-                $scope.properties = response;
+                $scope.properties = $rootScope.properties;
                 $scope.property_address = $scope.property.address;
             }, function(error) {
                 $scope.error = "failure";
