@@ -125,7 +125,7 @@
 										<label class="col-md-4 control-label">Property Photo</label>
 										<div class="col-md-8" style="margin-top:5px;">
 											<div class="input-group">
-												<input type="file" id="exampleInputFile1">
+												<input type="file" ngf-select="" ng-model="photo" name="photo" accept="image/*" >
 											</div>
 										</div>
 									</div>
@@ -163,7 +163,7 @@
 										<label class="col-md-4 control-label">Agreement Document</label>
 										<div class="col-md-8" style="margin-top:5px;">
 											<div class="input-group">
-												<input type="file" id="exampleInputFile1">
+												<input type="file" ngf-select="" ng-model="doc" name="doc" >
 											</div>
 										</div>
 									</div>
@@ -183,7 +183,7 @@
 					</div>
 					<!-- END SAMPLE FORM PORTLET-->
 					</div>
-                    <div class="col-md-6" ng-show="!showDetails">
+                    <div class="col-md-6" ng-show="showDetails">
 					<!-- BEGIN SAMPLE FORM PORTLET-->
 					    <div class="portlet box blue">
 						    <div class="portlet-title">
@@ -200,7 +200,7 @@
 						    <div class="portlet-body">
 							    <form class="form-horizontal" role="form" ng-submit="add_units();">
 							        <div class="unitDetails" ng-repeat="unit in units">
-							            <h4>Unit 1 Details</h4>
+							            <h4>Unit {{$index + 1}} Details</h4>
 								        <div class="form-body">
 									        <div class="form-group">
 										        <label class="col-md-3 control-label">Unit Name</label>
@@ -209,7 +209,7 @@
 												        <span class="input-group-addon">
 												        <i class="fa fa-tag"></i>
 												        </span>
-												        <input type="email" class="form-control" placeholder="e.g. #101 or 'Upper'">
+												        <input type="text" class="form-control" placeholder="e.g. #101 or 'Upper'" ng-model="unit.name">
 											        </div>
 										        </div>
 									        </div>
@@ -220,7 +220,7 @@
 												        <span class="input-group-addon">
 												        <i class="fa fa-crop"></i>
 												        </span>
-												        <input type="email" class="form-control" placeholder="Unit Size">										
+												        <input type="text" class="form-control" placeholder="Unit Size" ng-model="unit.footage">										
 											        </div>
 										        </div>
 									        </div>
@@ -231,7 +231,7 @@
 												        <span class="input-group-addon">
 												        <i class="fa fa-bed"></i>
 												        </span>
-												        <input type="email" class="form-control" placeholder="Number of Bedrooms">
+												        <input type="text" class="form-control" placeholder="Number of Bedrooms" ng-model="unit.bedrooms">
 											        </div>
 										        </div>
 									        </div>
@@ -242,7 +242,7 @@
 												        <span class="input-group-addon">
 												        <i class="fa fa-male"></i>
 												        </span>
-												        <input type="email" class="form-control" placeholder="Number of Bathrooms">
+												        <input type="text" class="form-control" placeholder="Number of Bathrooms" ng-model="unit.bathrooms">
 											        </div>
 										        </div>
 									        </div>

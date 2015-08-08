@@ -42,7 +42,7 @@ var ClientController = function($rootScope, $scope, $state, $localStorage, Resta
             $scope.client.user_id = $localStorage.user_id;
             
             var data_encoded = $.param($scope.client);
-            Restangular.one('clients', $stateParams.id).customPUT(data_encoded, undefined, undefined, undefined)
+            Restangular.one('clients', $stateParams.id).customPUT(data_encoded, undefined, undefined, {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
             .then(function(response) {
                 $scope.error = "success";
                 Restangular.one('clients', $localStorage.user_id).getList('list').then(function(response) {

@@ -1,9 +1,9 @@
-var spendtreeApp = angular.module('spendtreeApp', ['ui.router', 'ngStorage', 'restangular', 'spendtreeControllers']);
+var spendtreeApp = angular.module('spendtreeApp', ['ui.router', 'ngStorage', 'restangular', 'ngFileUpload', 'spendtreeControllers']);
 
 spendtreeApp.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',
 	function($stateProvider, $urlRouterProvider, RestangularProvider){
         RestangularProvider.setBaseUrl('http://localhost/laravel/spendtree/public/api/v1/');
-        RestangularProvider.setDefaultHeaders({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
+        //RestangularProvider.setDefaultHeaders({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
         
         $urlRouterProvider.otherwise("/otherwise");
         

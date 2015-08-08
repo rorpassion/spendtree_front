@@ -44,14 +44,14 @@
                             </div>
                             <div class="alert alert-success" ng-if="error=='success'">
                                 <button class="close" data-close="alert"></button>
-                                Client was updated successfully!
+                                Property was updated successfully!
                             </div>
                             <form class="form-horizontal" role="form" ng-submit="update_property();">
 							<div class="row">
 								<div class="col-md-6" style="padding-left:25px; padding-top:10px;">
 								<h4>Property Photo</h4>
 											<a href="javascript:;" class="thumbnail">
-											<img src="./assets/img/house.jpg" alt="100%x100%" data-src="holder.js/100%x100%">
+											<img ng-src="{{property.photo}}" alt="100%x100%" data-src="holder.js/100%x100%">
 											</a>
 								</div>
 								<div class="col-md-6">
@@ -147,8 +147,8 @@
 			<div class="clearfix">
 			</div>
 			<div class="row">
-			<div class="col-md-3">
-			<div class="portlet box blue">
+			    <div class="col-md-3">
+			        <div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-hand-o-right"></i>Select Unit
@@ -156,39 +156,17 @@
 							<div class="tools">
 								<a href="" class="collapse" data-original-title="" title="">
 								</a>
-								
-								
 							</div>
 						</div>
 						<div class="portlet-body">
 							<ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
-								<li class="">
-									<a href="javascript:;">
-									101 </a>
+								<li ng-class="selected_unit == unit ? 'active' : ''" 
+                                    ng-repeat="unit in units"
+                                    ng-click="select_unit(unit);">
+									<a href="javascript:;">{{ !unit.name ? 'New Unit' : unit.name }}</a>
 								</li>
-								<li class="">
-									<a href="javascript:;">
-									102 </a>
-								</li>
-								<li class="">
-									<a href="javascript:;">
-									103 </a>
-								</li>
-								<li class="active">
-									<a href="javascript:;">
-									104 </a>
-								</li>
-								<li class="">
-									<a href="javascript:;">
-									105 </a>
-								</li>
-								<li class="">
-									<a href="javascript:;">
-									106 </a>
-								</li>
-								
 							</ul>
-						<button type="button" class="btn btn blue">Add Unit</button>
+						<button type="button" class="btn btn blue" ng-click="add_empty_unit();">Add Unit</button>
 					</div>
 					<!-- END SAMPLE FORM PORTLET-->
 					</div>
@@ -204,139 +182,145 @@
 							<div class="tools">
 								<a href="" class="collapse" data-original-title="" title="">
 								</a>
-								
-								
 							</div>
 						</div>
 						<div class="portlet-body">
-							<form class="form-horizontal" role="form">
-							<div class="unitDetails">
-							<h4>Unit 104 Details</h4>
-								<hr>
-								<div class="bold row">
-									<div class="col-md-4">
-									Status: <span class="badge badge-round badge-success">Rented</span>
-									</div>
-									<div class="col-md-4">
-									Lease Expires: <span class="badge badge-round badge-warning">45 Days</span>
-									</div>
-									<div class="col-md-4">
-									Rent: $600 Due Monthly <span class="badge badge-round badge-danger">6 Days Late</span>
-									</div>
-								</div>
-								<hr>
-								<div class="form-body">
-									<div class="row">
-										<div class="col-md-5">
-										<div class="form-group">
-										<label class="col-md-4 control-label">Unit Name</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-tag"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="e.g. #101 or 'Upper'" value="105">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label">Sq. Footage</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-crop"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Unit Size" value="1200">										
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label">Bedrooms</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-bed"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Number of Bedrooms" value="2">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label">Bathrooms</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-male"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Number of Bathrooms" value="2">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label">Rent</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-dollar"></i>
-												</span>
-												<input type="email" class="form-control" placeholder="Monthly Rent" value="900">
-											</div>
-										</div>
-									</div>
-										</div>
-										<div class="col-md-7">
-										<div class="form-group">
-										<label class="col-md-3 control-label">Tenants</label>
-										<div class="col-md-9">
-											<ul class="list-group">
-												<li class="list-group-item">
-													 Tim Jackson
-													 <button class="btn btn-xs btn-danger pull-right" data-toggle="confirmation" data-original-title="Are you sure ?" title="">Remove</button>
-												</li>
-												<li class="list-group-item">
-													 Chris Brown
-													 <button class="btn btn-xs btn-danger pull-right" data-toggle="confirmation" data-original-title="Are you sure ?" title="">Remove</button>
-                                                </li>
-											</ul>
-												<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-user"></i>
-												</span>
-												<select class="form-control">
-													<option selected>Add Tenant</option>
-													<option>Create New Tenant</option>
-													<option>Jim Jones</option>
-													<option>John Smith</option>
-													<option>Jim Jones</option>
-													<option>John Smith</option>
-													<option>Jim Jones</option>
-													<option>John Smith</option>
-												</select>											</div>
-										</div>
-									</div>
-									<hr>
-										
-										<strong>Payment Policy:</strong><br> Rent due monthly. $50 fee if recieved after the 5th of each month.
-										<br><br>
-										<strong>Deposits: </strong><br>$500, recieved Jun-15-2014
-										</div>
-									</div>
+                            <div class="alert alert-danger" ng-if="unit_error=='failure'">
+                                <button class="close" data-close="alert"></button>
+                                You have some form errors. Please check below.
+                            </div>
+                            <div class="alert alert-success" ng-if="unit_error=='success'">
+                                <button class="close" data-close="alert"></button>
+                                Unit was updated successfully!
+                            </div>
+							<form class="form-horizontal" role="form" ng-submit="update_unit_details();">
+							    <div class="unitDetails">
+							        <h4>{{selected_unit.name}} Details</h4>
+								    <hr>
+								    <div class="bold row">
+									    <div class="col-md-4">
+									    Status: <span class="badge badge-round badge-success">Rented</span>
+									    </div>
+									    <div class="col-md-4">
+									    Lease Expires: <span class="badge badge-round badge-warning">45 Days</span>
+									    </div>
+									    <div class="col-md-4">
+									    Rent: $600 Due Monthly <span class="badge badge-round badge-danger">6 Days Late</span>
+									    </div>
+								    </div>
+								    <hr>
+								    <div class="form-body">
+									    <div class="row">
+										    <div class="col-md-5">
+										    <div class="form-group">
+										    <label class="col-md-4 control-label">Unit Name</label>
+										    <div class="col-md-8">
+											    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-tag"></i>
+												    </span>
+												    <input type="text" class="form-control" placeholder="e.g. #101 or 'Upper'" ng-model="selected_unit.name">
+											    </div>
+										    </div>
+									    </div>
+									    <div class="form-group">
+										    <label class="col-md-4 control-label">Sq. Footage</label>
+										    <div class="col-md-8">
+											    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-crop"></i>
+												    </span>
+												    <input type="text" class="form-control" placeholder="Unit Size" ng-model="selected_unit.footage">
+											    </div>
+										    </div>
+									    </div>
+									    <div class="form-group">
+										    <label class="col-md-4 control-label">Bedrooms</label>
+										    <div class="col-md-8">
+											    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-bed"></i>
+												    </span>
+												    <input type="text" class="form-control" placeholder="Number of Bedrooms" ng-model="selected_unit.bedrooms">
+											    </div>
+										    </div>
+									    </div>
+									    <div class="form-group">
+										    <label class="col-md-4 control-label">Bathrooms</label>
+										    <div class="col-md-8">
+											    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-male"></i>
+												    </span>
+												    <input type="text" class="form-control" placeholder="Number of Bathrooms" ng-model="selected_unit.bathrooms">
+											    </div>
+										    </div>
+									    </div>
+									    <div class="form-group">
+										    <label class="col-md-4 control-label">Rent</label>
+										    <div class="col-md-8">
+											    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-dollar"></i>
+												    </span>
+												    <input type="text" class="form-control" placeholder="Monthly Rent" ng-model="selected_unit.rent_amount">
+											    </div>
+										    </div>
+									    </div>
+										    </div>
+										    <div class="col-md-7">
+										    <div class="form-group">
+										    <label class="col-md-3 control-label">Tenants</label>
+										    <div class="col-md-9">
+											    <ul class="list-group">
+												    <li class="list-group-item">
+													     Tim Jackson
+													     <button class="btn btn-xs btn-danger pull-right" data-toggle="confirmation" data-original-title="Are you sure ?" title="">Remove</button>
+												    </li>
+												    <li class="list-group-item">
+													     Chris Brown
+													     <button class="btn btn-xs btn-danger pull-right" data-toggle="confirmation" data-original-title="Are you sure ?" title="">Remove</button>
+                                                    </li>
+											    </ul>
+												    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-user"></i>
+												    </span>
+												    <select class="form-control">
+													    <option selected>Add Tenant</option>
+													    <option>Create New Tenant</option>
+													    <option>Jim Jones</option>
+													    <option>John Smith</option>
+													    <option>Jim Jones</option>
+													    <option>John Smith</option>
+													    <option>Jim Jones</option>
+													    <option>John Smith</option>
+												    </select>											</div>
+										    </div>
+									    </div>
+									    <hr>
+										    
+										    <strong>Payment Policy:</strong><br> Rent due monthly. $50 fee if recieved after the 5th of each month.
+										    <br><br>
+										    <strong>Deposits: </strong><br>$500, recieved Jun-15-2014
+										    </div>
+									    </div>
+									    
+									    <hr>
+									    <div class="form-group">
+										    <label class="col-md-1 control-label">Description</label>
+										    <div class="col-md-12">
+											    <div class="input-group">
+												    <span class="input-group-addon">
+												    <i class="fa fa-tag"></i>
+												    </span>
+												    <textarea class="form-control" ng-model="selected_unit.description"></textarea>
+											    </div>
+										    </div>
+									    </div>
 									
-									<hr>
-									<div class="form-group">
-										<label class="col-md-1 control-label">Description</label>
-										<div class="col-md-12">
-											<div class="input-group">
-												<span class="input-group-addon">
-												<i class="fa fa-tag"></i>
-												</span>
-												<textarea class="form-control" >A beautiful ground-level unit complete with washer, dryer and parking. Water and basic cable are included in the rent</textarea>
-											</div>
-										</div>
 									</div>
-									
-									</div>
-							<hr>
+							        <hr>
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-9">
